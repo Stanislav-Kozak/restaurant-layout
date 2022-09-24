@@ -3,8 +3,10 @@
   --sm-break-point: 768px;
   --lp-break-point: 1024px;
   --primary-color: #FF7400;
+  --primary-light-color: #BC9060;
   --primary-dark-color: #D67E35;
   --main-font-color: #000000;
+  --secondary-black-font-color: #2C2C2C;
   --secondary-font-color: #656363;
   --white-font-color: #FFFFFF;
 }
@@ -224,19 +226,19 @@ a {
   background-position: center;
   z-index: -5;
   width: 100%;
-  max-height: 800px;
-  height: 100%;
+  height: 800px;
   top: 0;
 }
 
 /* -------------- < Welcome block > -------------- */
 
 .welcome {
-  margin-top: 180px;
+  margin-top: 210px;
 }
 
 @media (min-width: 1024px) {
   .welcome {
+    margin-top: 150px;
     display: inline-block;
   }
 }
@@ -261,21 +263,21 @@ a {
 .welcome__title h3 {
   margin-top: 4px;
   font-weight: 400;
-  font-size: 40px;
-  line-height: 46px;
+  font-size: 36px;
+  line-height: 42px;
 }
 
 @media (min-width: 1024px) {
   .welcome__title h2 {
     font-weight: 400;
-    font-size: 50px;
+    font-size: 48px;
     line-height: 57px;
   }
 
   .welcome__title h3 {
     font-weight: 400;
-    font-size: 80px;
-    line-height: 92px;
+    font-size: 72px;
+    line-height: 86px;
   }
 }
 
@@ -299,6 +301,9 @@ a {
   gap: 8px;
   margin-top: 12px;
   text-align: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
   color: var(--white-font-color);
 }
 
@@ -314,6 +319,180 @@ a {
 }
 
 /* -------------- </ Welcome block > -------------- */
+
+/* -------------- < About us block > -------------- */
+
+.about-us {
+  margin-top: 220px;
+}
+
+.about-us__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
+.about-us__card {
+  padding: 48px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .about-us {
+    margin-top: 120px;
+  }
+
+  .about-us__card-wrapper {
+    flex-direction: row;
+  }
+
+  .about-us__card {
+    flex: 1 1 33%;
+  }
+}
+
+.about-us__card-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--secondary-black-font-color);
+}
+
+.about-us__card-title strong {
+  color: var(--primary-light-color);
+}
+
+.about-us__card-description {
+  margin-top: 10px;
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--secondary-font-color);
+}
+
+@media (min-width: 1024px) {
+  .about-us__card-title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .about-us__card-description {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 30px;
+  }
+}
+
+.about-us__about-wrapper {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
+@media (min-width: 1024px) {
+  .about-us__about-wrapper {
+    margin-top: 150px;
+    flex-direction: row;
+  }
+
+  .about-us__about-wrapper div {
+    flex: 1 1 50%
+  }
+}
+
+.about-us__history-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us__history-title {
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 46px;
+  text-align: center;
+}
+
+.about-us__history-title strong {
+  color: var(--primary-dark-color);
+}
+
+.about-us__history-description {
+  margin-top: 48px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--secondary-font-color);
+}
+
+@media (min-width: 1024px) {
+  .about-us__history-title {
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+  }
+
+  .about-us__history-description {
+    max-width: 444px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.about-us__history-stats {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .about-us__history-stats {
+    margin-top: 100px;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+
+.about-us__stats-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us__stats-number {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--primary-light-color);
+}
+
+.about-us__stats-label {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.about-us__image {
+  max-width: 100%;
+}
+
+/* -------------- </ About us block > -------------- */
 
 /* ----------------------- </ Main content wrapper style > ----------------------- */
 
