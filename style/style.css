@@ -17,6 +17,16 @@ a {
   cursor: pointer;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* ----------------------- < Helpers style > ----------------------- */
 
 .container {
@@ -138,8 +148,8 @@ a {
   align-items: center;
 
   font-weight: 700;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 22px;
+  line-height: 24px;
 }
 
 .dropdown-menu__navigation-list a {
@@ -149,7 +159,13 @@ a {
 .dropdown-menu__phone-wrapper {
   align-self: center;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.dropdown-menu__button {
+  font-weight: 700;
+  font-size: 22px;
   line-height: 24px;
 }
 
@@ -182,6 +198,7 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 /* ----------------------- < Header style > ----------------------- */
@@ -246,7 +263,7 @@ a {
   border-right: 1px solid var(--white-font-color);
 
   font-weight: 700;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 19px;
   color: var(--white-font-color);
 }
@@ -279,7 +296,7 @@ a {
   max-width: 150px;
 
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 19px;
 }
 
@@ -639,7 +656,7 @@ a {
 @media (min-width: 1024px) {
   .book__title {
     font-weight: 400;
-    font-size: 42px;
+    font-size: 48px;
     line-height: 52px;
   }
 
@@ -659,7 +676,7 @@ a {
 
 /* -------------- < Menu block > -------------- */
 .dishes {
-  margin-top: 60px;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
 }
@@ -690,6 +707,7 @@ a {
   height: 474px;
   background-image: url("../image/pizza.png");
   background-repeat: no-repeat;
+  border-radius: 15px;
 }
 
 @media (min-width: 1024px) {
@@ -704,12 +722,14 @@ a {
   margin-top: 72px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 50px;
 }
 
 @media (min-width: 1024px) {
   .dishes__menu-wrapper {
     flex-direction: row;
+    align-items: inherit;
     gap: 20px;
   }
 }
@@ -739,8 +759,8 @@ a {
   gap: 6px;
 
   font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 22px;
+  line-height: 24px;
 }
 
 .dishes__item-dash {
@@ -767,9 +787,13 @@ a {
 
 .dishes__item-image {
   width: 130px;
+  height: 130px;
+  border-radius: 15px;
 }
 
 .dishes__item-name {
+  max-width: 350px;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -811,6 +835,7 @@ a {
 }
 
 .menu__item-list {
+  flex: 1 1 33%;
   position: relative;
   padding: 80px 35px 30px;
   background: var(--white-font-color);
@@ -848,9 +873,13 @@ a {
 .menu__item-recommended {
   padding: 8px 16px;
   position: absolute;
+  border-radius: 0 0 15px 0;
   top: 0;
   left: 0;
-  background: var(--primary-dark-color);
+  background: #ff6638;
+  font-weight: 600;
+  font-size: 16px;
+  color: #FFFFFF;
 }
 
 .menu__item-price {
@@ -874,7 +903,7 @@ a {
 
 .menu__item-name {
   margin-top: 12px;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 22px;
   line-height: 26px;
   color: var(--main-font-color);
@@ -882,7 +911,8 @@ a {
 
 .menu__item-description {
   margin-top: 20px;
-  font-weight: 400;
+  margin-bottom: 20px;
+  font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   color: var(--main-font-color);
@@ -890,7 +920,7 @@ a {
 }
 
 .menu__item-button {
-  margin-top: 20px;
+  margin-top: auto;
   width: 100%;
   background: var(--primary-dark-color);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
